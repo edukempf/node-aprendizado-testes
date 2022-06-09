@@ -2,10 +2,10 @@
   "name": "node-aprendizado-testes",
   "packageManager": "yarn@3.2.1",
   "scripts": {
-    "start": "cross-env TZ=UTC nodemon -w src -e 'js,jsx,ts,tsx,json' --exec babel-node --extensions '.js,.jsx,.ts,.tsx' src/index.ts",
+    "start": "cross-env TZ=UTC nodemon -w src -e 'js,ts,json' --exec babel-node --extensions '.js,.ts' src/index.ts",
     "start:dev": "run-s start",
     "lint": "run-p lint:eslint lint:tsc",
-    "lint:eslint": "npx eslint . --cache --ext .js,.jsx,.ts,.tsx",
+    "lint:eslint": "npx eslint . --cache --ext .js,.ts",
     "lint:tsc": "tsc --noEmit",
     "test": "jest --detectOpenHandles --forceExit",
     "dist": "run-s app:clean app:build"
