@@ -1,0 +1,129 @@
+{
+    "env": {
+        "es2020": true,
+        "node": true
+    },
+    "parserOptions": {
+        "project": "./tsconfig.json"
+    },
+    "extends": [
+        "airbnb-typescript/base"
+    ],
+    "plugins": [
+        "eslint-plugin-import-helpers"
+    ],
+    "globals": {
+        "test": false,
+        "expect": false
+    },
+    "settings": {
+        "import/resolver": {
+            "typescript": {}
+        },
+        "react": {
+            "version": "detect"
+        }
+    },
+    "rules": {
+        "import/no-extraneous-dependencies": [
+            "error",
+            {
+                "devDependencies": false,
+                "optionalDependencies": false,
+                "peerDependencies": false
+            }
+          ],
+        "no-console": [
+            "error",
+            {
+                "allow": [
+                    "warn",
+                    "info"
+                ]
+            }
+        ],
+        "no-underscore-dangle": [
+            "error"
+        ],
+        "max-len": [
+            "warn",
+            120
+        ],
+        "no-lonely-if": "off",
+        "padded-blocks": [
+            "error",
+            {
+                "classes": "always"
+            }
+        ],
+        "arrow-body-style": "off",
+        "arrow-parens": [
+            "warn",
+            "as-needed"
+        ],
+        "class-methods-use-this": "off",
+        "no-useless-constructor": "off",
+        "lines-between-class-members": [
+            "error",
+            "always",
+            {
+                "exceptAfterSingleLine": true
+            }
+        ],
+        "no-multiple-empty-lines": [
+            2,
+            {
+                "max": 1
+            }
+        ],
+        "prefer-default-export": "off",
+        "import/prefer-default-export": "off",
+        "import/extensions": "off",
+        "import-helpers/order-imports": [
+            "warn",
+            {
+                "newlinesBetween": "always",
+                "groups": [
+                    "module",
+                    "/^~/",
+                    [
+                        "parent",
+                        "sibling",
+                        "index"
+                    ]
+                ],
+                "alphabetize": {
+                    "order": "asc",
+                    "ignoreCase": true
+                }
+            }
+        ],
+        "@typescript-eslint/lines-between-class-members": [
+            "error",
+            "always",
+            {
+                "exceptAfterSingleLine": true,
+                "exceptAfterOverload": true
+            }
+        ],
+        "@typescript-eslint/no-unused-vars": [
+            "error",
+            {
+                "args": "none"
+            }
+        ],
+        "@typescript-eslint/indent": [
+            "error",
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "@typescript-eslint/type-annotation-spacing": [
+            "error",
+            {
+                "after": true
+            }
+        ]
+    }
+}
